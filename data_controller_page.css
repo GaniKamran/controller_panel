@@ -1,0 +1,231 @@
+body {
+    background-color: rgb(156, 166, 170);
+   
+  }
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+
+}
+.button_st{
+    background-color: blue;
+    width: 40px;
+    height: 10px;
+}
+
+
+
+.flex-container {
+    display: flex;
+}
+.flex-container2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-child {
+    flex: 1;
+    border: 2px solid yellow;
+    height: 200px;
+}  
+.flex-child2 {
+    flex: 1 2   ;
+    border: 2px solid yellow;
+    height: 96px;
+}  
+.grand-chil{
+    display: flex;
+    flex-direction: column
+}
+.controller{
+width: 100%;
+height: 100%;
+flex:1;
+background-color: burlywood;
+}
+.controller_action{
+    width:100%;
+    height: 100%;
+    flex:1;
+    background-color: black;
+}
+
+.panel_1{
+    width: 100%;
+    height: 100%;
+   
+    background-color: rgb(29, 17, 61);
+    }
+.panel_2{
+        width:100%;
+        height: 100%;
+        flex:2;
+        background-color: rgb(172, 77, 77);
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 0 0 0;
+        background: #2c613e;
+      }
+      
+    .g {
+        background: #E16036;
+        
+        
+       
+       
+      }
+      
+      .grid-33 {
+        width: calc(30.3333% - 15px);
+      }
+      
+      .grid-50 {
+        width: calc(68.9999% - 0px);
+        height: 100px;
+      }
+      
+      .grid-66 {
+        width: calc(88.6666% - 0px);
+        height: 100px;
+      }
+      
+      .grid-100 {
+        width: calc(100% - 15px);
+      }
+  .button_accept{
+    width: 100px;
+    height: 30px;
+    background-color: #E16036;
+
+  }
+  .paragraph{
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .par_div{
+    margin-left: 30% ;
+    width:100px;
+    height: 100%;
+    background-color:wheat ;
+  }
+  .my-button {
+    background-color: #4CAF50; /* Set background color */
+    border: none; /* Remove border */
+    color: white; /* Set text color */
+    padding: 12px 24px; /* Set padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make button inline */
+    font-size: 16px; /* Set font size */
+    margin: 4px 2px; /* Add margin */
+    cursor: pointer; /* Add cursor pointer */
+    border-radius: 8px; /* Add rounded corners */
+    transition-duration: 0.4s; /* Add transition effect */
+  }
+  
+  .my-button:hover {
+    background-color: #3e8e41; /* Change background color on hover */
+  }
+  .volume-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+  }
+  
+  .volume-button.muted {
+    background-color: #F44336;
+  }
+  .robotic-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .tunnel {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  
+  .button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .price {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Change button position based on value */
+  .button.value-1 {
+    transform: translateX(20%);
+  }
+  
+  .button.value-2 {
+    transform: translateX(40%);
+  }
+  
+  .button.value-3 {
+    transform: translateX(60%);
+  }
+  
+  .button.value-4 {
+    transform: translateX(80%);
+  }
+  .progress-bar-container {
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .progress-bar {
+    width: 50%;
+    height: 10px;
+    background-color: #eee;
+    cursor: pointer;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #4CAF50;
+    width: 0%;
+    transition: width 0.2s ease-in-out;
+  }
+  
+  #progress-label {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  input[type="hidden"] {
+    display: none;
+  }

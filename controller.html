@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>A_sffsef</title>
+    
+    <link rel="stylesheet" href="controller.css">
+</head>
+<body>
+    <div class="flex-container">
+        <div class="left-container">Left container
+          <input type="text" class="dark-input" placeholder="Enter your text...">
+          
+            <select class="styled-select">
+              <option value="" disabled selected>Select an option</option>
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+            </select>
+          
+        </div>
+        <div class="right-container">
+          <div class="inner-left-container">
+            <h5> New chanel</h5>
+            <label for="progress-bar-value" id="progress-label">0</label><label>% </label>
+            <div class="progress-bar-container">
+                <div class="progress-bar">
+                  <div class="progress" id="progress"></div>
+                </div>
+             
+                <input type="hidden" name="progress-bar-value" id="progress-bar-value">
+            </div>
+          </div>
+          <div class="inner-right-container">
+
+            <div class="right-container">
+              <div class="inner-left-container1">Inner left container</div>
+              <div class="inner-right-container1">
+    
+              
+                ergre
+    
+              </div>
+
+          </div>
+        </div>
+      </div></div>
+      <!-- <div class="table-responsive">
+        <table>
+        
+          <thead>
+            <tr>
+              <th style="width: 10%;"><img src="human-icon.png" alt=""></th>
+              <th style="width: 20%;">Last Name</th>
+              <th style="width: 20%;">First Name</th>
+              <th style="width: 10%;">Age</th>
+              <th style="width: 20%;">Birth Date</th>
+              <th style="width: 20%;">Status</th>
+            </tr>
+          </thead>
+       
+          <tbody>
+            <tr>
+              <td><img src="john-doe.jpg" alt=""></td>
+              <td>Doe</td>
+              <td>John</td>
+              <td>35</td>
+              <td>1986-05-16</td>
+              <td>Active</td>
+            </tr>
+     
+          </tbody>
+        </table>
+     
+        <ul class="pagination">
+          <li class="disabled"><span>&laquo;</span></li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><span>&hellip;</span></li>
+          <li><a href="#">10</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+      </div> -->
+    <!-- Remove the extra closing </div> tag below -->
+    <!-- </div> --> 
+
+    <!-- Remove the extra </div> tag below -->
+    <!-- </div> -->
+    
+    
+    <div class="flex-container2">
+      <div class="left-container2">
+        <div class="video-stream-container">
+          <video id="video-stream" class="video_con" src="video.mp4" controls></video>
+          <div class="video-controls">
+            <div class="control-labels">
+              <div class="label">Altitude: <span id="altitude">0 m</span></div>
+              <div class="label">Speed: <span id="speed">0 km/h</span></div>
+              <div class="label">Direction: <span id="direction">N</span></div>
+            </div>
+            <div class="control-buttons">
+              <button id="play-pause-button">Play/Pause</button>
+              <button id="stop-button">Stop</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="right-container2">
+        <div class="terminal">
+          <div class="terminal-header">
+            <span>Terminal</span>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <p>Welcome to the terminal!</p>
+          </div>
+          <div class="terminal-input">
+            <span>&gt;&gt;</span>
+            <input type="text" id="terminal-input" autofocus />
+          </div>
+        </div>
+
+        </div>
+      </div>
+</body>
+<script src="controller.js"></script> 
+</html>
