@@ -1,9 +1,8 @@
 const progressBarContainer = document.querySelector('.progress-bar-container');
-const progressBar = document.querySelector('.progress-bar');
-const progress = document.querySelector('.progress');
-const progressLabel = document.querySelector('#progress-label');
-const progressBarValue = document.querySelector('#progress-bar-value');
-
+const progressBar = document.querySelector('#progress-bar1');
+const progress = document.querySelector('#progress-1');
+const progressLabel = document.querySelector('#progress-label-1');
+const progressBarValue = document.querySelector('#progress-bar-value-1');
 progressBar.addEventListener('click', function(e) {
   const x = e.pageX - this.offsetLeft;
   const percent = x / this.offsetWidth * 100;
@@ -12,9 +11,43 @@ progressBar.addEventListener('click', function(e) {
   progressLabel.textContent = Math.round(percent);
 });
 
+const progressBarContainer2 = document.querySelector('.progress-bar-container');
+const progressBar2 = document.querySelector('#progress-bar2');
+const progress2 = document.querySelector('#progress-2');
+const progressLabel2 = document.querySelector('#progress-label-2');
+const progressBarValue2 = document.querySelector('#progress-bar-value-2');
+progressBar2.addEventListener('click', function(e) {
+  const x = e.pageX - this.offsetLeft;
+  const percent = x / this.offsetWidth * 100;
+  progress2.style.width = `${percent}%`;
+  progressBarValue2.value = percent;
+  progressLabel2.textContent = Math.round(percent);
+});
+const progressBarContainer3 = document.querySelector('.progress-bar-container');
+const progressBar3 = document.querySelector('#progress-bar3');
+const progress3 = document.querySelector('#progress-3');
+const progressLabel3 = document.querySelector('#progress-label-3');
+const progressBarValue3 = document.querySelector('#progress-bar-value-3');
+progressBar3.addEventListener('click', function(e) {
+  const x = e.pageX - this.offsetLeft;
+  const percent = x / this.offsetWidth * 100;
+  progress3.style.width = `${percent}%`;
+  progressBarValue3.value = percent;
+  progressLabel3.textContent = Math.round(percent);
+});
 
-
-
+const progressBarContainer4 = document.querySelector('.progress-bar-container');
+const progressBar4 = document.querySelector('#progress-bar4');
+const progress4 = document.querySelector('#progress-4');
+const progressLabel4 = document.querySelector('#progress-label-4');
+const progressBarValue4 = document.querySelector('#progress-bar-value-4');
+progressBar4.addEventListener('click', function(e) {
+  const x = e.pageX - this.offsetLeft;
+  const percent = x / this.offsetWidth * 100;
+  progress4.style.width = `${percent}%`;
+  progressBarValue4.value = percent;
+  progressLabel4.textContent = Math.round(percent);
+});
 const terminalInput = document.getElementById("terminal-input");
 const terminalBody = document.getElementById("terminal-body");
 
@@ -33,6 +66,7 @@ function executeCommand() {
   const output = document.createElement("p");
   output.textContent = "Hello, world!";
   terminalBody.appendChild(output);
+  terminalBody.scrollTop = terminalBody.scrollHeight;
 }
 
 // Listen for Enter key press to execute the command

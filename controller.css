@@ -26,7 +26,19 @@ body {
     flex-direction: row;
     height: 200px;
   }
-  
+  .result_rightpart{
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+  }
+
+  .result_leftpart {
+    flex-basis: 30%;
+    background-color: #f2f2f2;
+    padding: 10px;
+    height: 200px;
+  }
   .inner-left-container {
     flex-basis: 30%;
     background-color: #ddd;
