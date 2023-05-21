@@ -26,17 +26,18 @@ body {
     flex-direction: row;
     height: 200px;
   }
-  .result_rightpart{
-    flex-basis: 70%;
-    display: flex;
-    flex-direction: row;
-    height: 200px;
-  }
+ 
 
   .result_leftpart {
     flex-basis: 30%;
     background-color: #f2f2f2;
     padding: 10px;
+    height: 200px;
+  }
+  .result_rightpart{
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: row;
     height: 200px;
   }
   .inner-left-container {
@@ -113,6 +114,22 @@ body {
     
     height: 200px;
   }
+  
+  .inner-left-container2 {
+    flex-basis: 50%;
+    background-color: #ddd;
+   
+    height: 200px;
+  }
+  
+  .inner-right-container2 {
+    flex-basis: 50%;
+    
+    background-color: #f2f2f2;
+    
+    height: 200px;
+  }
+
 
   .dark-input {
     background-color: #292929;
@@ -363,4 +380,85 @@ body {
     flex-direction: row;
     height: 600px;
   }
- 
+ .label_mode{
+
+margin-top: 10px;
+
+ }
+ .label_st{
+
+  font: 1em sans-serif ;
+  font-size: medium;
+  color: #0d3d44;
+ }
+
+ .yellow-black-button {
+  background-color: #ffd31d; /* yellow */
+  color: #000000; /* black */
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  padding: 0.4rem 1rem;
+  text-transform: uppercase;
+
+}
+
+.yellow-black-button:hover {
+  background-color: #ffc107; /* darker yellow */
+
+}
+
+.yellow-black-button:focus {
+  outline: none;
+
+}
+
+
+.performance-graphic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.axis-x {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 20px;
+  width: 600px;
+  height: 30px;
+}
+
+.axis-y {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 20px;
+  height: 300px;
+  width: 30px;
+}
+
+.ticks-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.tick {
+  width: 1px;
+  height: 5px;
+  background-color: #aaa;
+}
+
+.label {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.chart {
+  margin-top: 20px;
+  width: 600px;
+  height: 300px;
+  border: 1px solid #aaa;
+}

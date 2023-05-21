@@ -105,3 +105,103 @@ video.addEventListener('timeupdate', () => {
   speedLabel.textContent = `Speed: ${Math.floor(video.currentTime * 3.6)} km/h`;
   directionLabel.textContent = `Direction: ${Math.random() < 0.5 ? 'N' : 'S'}`;
 });
+
+
+
+
+
+// Get the canvas element and its context
+const canvas = document.querySelector('.chart');
+const ctx = canvas.getContext('2d');
+
+// Set the canvas width and height to match its CSS size
+canvas.width = canvas.offsetWidth;
+canvas.height = canvas.offsetHeight;
+
+// Define the X and Y axis tick counts
+const xAxisTicks = 10;
+const yAxisTicks = 5;
+
+// Define the maximum Y value for the chart
+const maxYValue = 100;
+
+// Define the time interval between data points (in seconds)
+const timeInterval = 1;
+
+// Define an array to store the memory usage data
+const memoryUsageData = [];
+
+// Function to generate random memory usage data
+function generateMemoryUsageData() {
+  const memoryUsage = Math.floor(Math.random() * 100);
+  memoryUsageData.push(memoryUsage);
+}
+
+// Generate initial memory usage data
+for (let i = 0; i < xAxisTicks; i++) {
+  generateMemoryUsageData();
+}
+
+// Function to draw the X axis ticks and labels
+function drawXAxis() {
+  const tickSpacing = canvas.width / xAxisTicks;
+  const labelSpacing = tickSpacing * 2;
+  ctx.beginPath();
+  for (let i = 0; i <= xAxisTicks; i++) {
+    const x = tickSpacing * i;
+    const label = `${i * timeInterval}s`;
+    ctx.moveTo(x, 0);
+    ctx.lineTo(x, 5);
+    ctx.fillText(label, x - (labelSpacing / 2), 20);
+  }
+  ctx.stroke();
+}
+
+// Function to draw the Y axis ticks and labels
+function drawYAxis() {
+  const tickSpacing = canvas.height / yAxisTicks;
+  const labelSpacing = tickSpacing * 2;
+  ctx.beginPath();
+  for (let i = 0; i <= yAxisTicks; i++) {
+    const y = canvas.height - (tickSpacing * i);
+    const label = `${(i / yAxisTicks * maxYValue).toFixed(0)}MB`;
+    ctx.moveTo(0, y);
+    ctx.lineTo(-5, y);
+    ctx.fillText(label, -labelSpacing, y + 5);
+    }
+    ctx.stroke();
+    }
+    
+    // Function to draw the performance chart
+    function drawChart() {
+    // Clear the canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // Generate new memory usage data
+    generateMemoryUsageData();
+    
+    // Draw the X and Y axis
+    drawXAxis();
+    drawYAxis();
+    
+    // Draw the performance data
+    const dataSpacing = canvas.width / (xAxisTicks - 1);
+    ctx.beginPath();
+    ctx.moveTo(0, canvas.height - (memoryUsageData[0] / maxYValue * canvas.height));
+    for (let i = 1; i < xAxisTicks; i++) {
+    const x = dataSpacing * i;
+    const y = canvas.height - (memoryUsageData[i] / maxYValue * canvas.height);
+    ctx.lineTo(x, y);
+    }
+    ctx.strokeStyle = 'blue';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    
+    // Remove old data points from the memory usage data array
+    if (memoryUsageData.length > xAxisTicks) {
+    memoryUsageData.shift();
+    }
+    }
+    
+    // Set the chart update interval
+    setInterval(drawChart, timeInterval * 1000);
